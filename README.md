@@ -29,13 +29,16 @@ opi codecs
 
 ```
 
+### Configure
+
 Ensure stow is installed.
 
 ``` bash
+git clone https://github.com/sudhanv09/dotfiles
+cd dotfiles
 stow .
-```
 
-### Fish
+```
 
 Install Fish shell and setup fisher and tide prompt.
 
@@ -45,10 +48,8 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 fisher install IlanCosman/tide@v6
 ```
 
-### Tmux
-
+Login to tmux and Press leader + I to install all plugins
 ``` bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-Login to tmux and Press leader + I to install all plugins
