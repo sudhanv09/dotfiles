@@ -44,7 +44,6 @@ Install Fish shell and setup fisher and tide prompt.
 
 ```
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-
 fisher install IlanCosman/tide@v6
 ```
 
