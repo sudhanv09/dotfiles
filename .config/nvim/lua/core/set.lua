@@ -1,4 +1,4 @@
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -39,4 +39,3 @@ vim.o.updatetime = 50
 vim.o.timeoutlen = 300
 
 vim.o.completeopt = 'menuone,noselect'
-
