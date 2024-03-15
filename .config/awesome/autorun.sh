@@ -8,3 +8,5 @@ run() {
 }
 
 run "fcitx5"
+
+nitrogen --restore &
