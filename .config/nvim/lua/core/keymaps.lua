@@ -2,7 +2,7 @@
 vim.keymap.set('n', '<leader>e', '<cmd>Oil<CR>', { desc = 'Open Explorer' })
 
 -- Lazygit
-vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>', { desc = 'Open Lazygit' })
+-- vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>', { desc = 'Open Lazygit' })
 
 -- Harpoon
 --------------------------------------------------------------------------
@@ -18,13 +18,13 @@ end, { desc = 'Harpoon menu' })
 vim.keymap.set('n', '<C-h>', function()
     harpoon:list():select(1)
 end, { desc = 'Harpoon jump to 1' })
-vim.keymap.set('n', '<C-t>', function()
+vim.keymap.set('n', '<C-i>', function()
     harpoon:list():select(2)
 end, { desc = 'Harpoon jump to 2' })
-vim.keymap.set('n', '<C-n>', function()
+vim.keymap.set('n', '<C-o>', function()
     harpoon:list():select(3)
 end, { desc = 'Harpoon jump to 3' })
-vim.keymap.set('n', '<C-s>', function()
+vim.keymap.set('n', '<C-p>', function()
     harpoon:list():select(4)
 end, { desc = 'Harpoon jump to 4' })
 

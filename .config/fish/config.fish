@@ -8,6 +8,7 @@ alias dust="dust -rbd 1"
 alias mvfo="mv */* . && rmdir */"
 
 zoxide init fish | source
+jj util completion fish | source
 
 set -gx EDITOR /usr/bin/nvim
 

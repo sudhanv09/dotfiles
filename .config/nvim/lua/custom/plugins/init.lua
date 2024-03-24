@@ -49,4 +49,7 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
         opts = {},
     },
+    {
+        "sindrets/diffview.nvim"
+    },
 }
