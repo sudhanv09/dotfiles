@@ -6,6 +6,9 @@ alias ls="eza -G --icons"
 alias rsync="rsync -raP --info=progress2 --info=name0"
 alias dust="dust -rbd 1"
 alias mvfo="mv */* . && rmdir */"
+alias lg="lazygit"
+alias lzd="lazydocker"
+
 
 zoxide init fish | source
 jj util completion fish | source

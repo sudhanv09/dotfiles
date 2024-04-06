@@ -435,7 +435,7 @@ awful.rules.rules = {
     },
 
     {
-        rule = { class = "Firefox" },
+        rule = { class = "Firefox", "code" },
         properties = { opacity = 1, maximized = false, floating = false }
     },
 }
