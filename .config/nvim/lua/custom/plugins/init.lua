@@ -5,6 +5,7 @@
 return {
     {
         'kdheepak/lazygit.nvim',
+        lazy = true,
         -- optional for floating window border decoration
         dependencies = {
             'nvim-lua/plenary.nvim',
@@ -19,6 +20,7 @@ return {
     },
     {
         'ThePrimeagen/harpoon',
+        lazy = true,
         branch = 'harpoon2',
         dependencies = { 'nvim-lua/plenary.nvim' },
     },
@@ -46,6 +48,7 @@ return {
     },
     {
         "folke/todo-comments.nvim",
+        lazy = true,
         dependencies = { "nvim-lua/plenary.nvim" },
         opts = {},
     },

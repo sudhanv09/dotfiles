@@ -9,6 +9,9 @@ alias mvfo="mv */* . && rmdir */"
 alias lg="lazygit"
 alias lzd="lazydocker"
 
+alias mon="bash ~/.screenlayout/monitor.sh"
+alias tv="bash ~/.screenlayout/tv.sh"
+
 
 zoxide init fish | source
 jj util completion fish | source

@@ -320,7 +320,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "y", function() awful.spawn("kitty -e yazi") end,
         { description = "Launch Yazi", group = "user" }),
     awful.key({ modkey }, "Return", function() awful.spawn(terminal) end,
-        { description = "open a terminal", group = "user" })
+        { description = "open a terminal", group = "user" }),
+    awful.key({ modkey }, "e", function() awful.spawn("emacsclient -c -a emacs") end,
+        { description = "open Emacs", group = "user" })
+
 )
 
 clientkeys = gears.table.join(
