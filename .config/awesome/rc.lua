@@ -322,7 +322,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "Return", function() awful.spawn(terminal) end,
         { description = "open a terminal", group = "user" }),
     awful.key({ modkey }, "e", function() awful.spawn("emacsclient -c -a emacs") end,
-        { description = "open Emacs", group = "user" })
+        { description = "open Emacs", group = "user" }),
+    awful.key({}, "Print", function() awful.spawn("flameshot gui") end,
+        { description = "open Flameshot", group = "user" })
+
 
 )
 
@@ -438,7 +441,11 @@ awful.rules.rules = {
     },
 
     {
-        rule = { class = "Firefox", "code" },
+        rule = { class = "Firefox" },
+        properties = { opacity = 1, maximized = false, floating = false }
+    },
+    {
+        rule = { class = "code-oss" },
         properties = { opacity = 1, maximized = false, floating = false }
     },
 }
