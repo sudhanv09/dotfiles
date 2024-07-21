@@ -38,16 +38,17 @@ local on_attach = function(_, bufnr)
 end
 
 -- document existing key chains
-require('which-key').register {
-  ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-  ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-  ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-  ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
+local wk = require("which-key")
+wk.add {
+  { '<leader>c', name = '[C]ode' },
+  { '<leader>g', name = '[G]it' },
+  { '<leader>r', name = '[R]ename' },
+  { '<leader>s', name = '[S]earch' },
 }
 -- register which-key VISUAL mode
-require('which-key').register({
-  ['<leader>'] = { name = 'VISUAL <leader>' },
-}, { mode = 'v' })
+wk.add {
+  { '<leader>', name = 'VISUAL <leader>', mode = 'v' }
+}
 
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.

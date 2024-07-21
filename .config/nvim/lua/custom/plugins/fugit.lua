@@ -1,17 +1,18 @@
 return {
     'SuperBo/fugit2.nvim',
-    opts = {},
-    lazy = true,
+    opts = {
+        width = 100,
+    },
     dependencies = {
         'MunifTanjim/nui.nvim',
         'nvim-tree/nvim-web-devicons',
         'nvim-lua/plenary.nvim',
         {
-            'chrisgrieser/nvim-tinygit',
+            'chrisgrieser/nvim-tinygit', -- optional: for Github PR view
             dependencies = { 'stevearc/dressing.nvim' }
-        }
+        },
     },
-    cmd = { 'Fugit2', 'Fugit2Graph' },
+    cmd = { 'Fugit2', 'Fugit2Diff', 'Fugit2Graph' },
     keys = {
         { '<leader>gg', mode = 'n', '<cmd>Fugit2<cr>' }
     }
