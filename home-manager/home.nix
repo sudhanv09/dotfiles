@@ -47,7 +47,9 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    "awesome/rc.lua".source = ../.config/awesome/rc.lua;
+    ".config/awesome/rc.lua".source = ../.config/awesome/rc.lua;
+    ".config/kitty".source = ../.config/kitty;
+    ".config/rofi".source = ../.config/rofi;
   };
 
   home.sessionVariables = {

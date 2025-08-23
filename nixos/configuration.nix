@@ -14,15 +14,21 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  nix.package = pkgs.nixVersions.stable;
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Enable networking
+  networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
+  networking.networkmanager.ensureProfiles.profiles = {
+	home-wifi = {
+		connection = {
+			id="Flat earth Society";
+			permissions = "";
+			type = "wifi";
+		};
+	};
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Taipei";
@@ -86,11 +92,7 @@
     #media-session.enable = true;
   };
   
-  nix.package = pkgs.nixVersions.stable;
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
-
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zeus = {
     isNormalUser = true;
