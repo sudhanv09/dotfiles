@@ -42,18 +42,19 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
+  # Configure X11
+  services.xserver = {
+    enable = true;
     layout = "us";
-    variant = "";
+    xkbVariant = "";
+    
+    displayManager.sddm.enable = true;
+    desktopManager.plasma6.enable = true;
+    
+    windowManager.awesome.enable = true;
+    libinput.enable = true;
+    libinput.mouse.naturalScrolling = true;
+    libinput.touchpad.naturalScrolling = true;
   };
 
   # Enable CUPS to print documents.
@@ -116,7 +117,7 @@
   # };
 
   # List services that you want to enable:
-
+  
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
