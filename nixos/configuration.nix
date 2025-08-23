@@ -42,21 +42,32 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Configure X11
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+  # Configure keymap in X11
   services.xserver = {
     enable = true;
+    xkb = {
     layout = "us";
-    xkbVariant = "";
-    
-    displayManager.sddm.enable = true;
-    desktopManager.plasma6.enable = true;
+    variant = "";
+    };
     
     windowManager.awesome.enable = true;
-    libinput.enable = true;
-    libinput.mouse.naturalScrolling = true;
-    libinput.touchpad.naturalScrolling = true;
   };
-
+  
+  # Touchpad and mouse
+  services.libinput = {
+    enable = true;
+    mouse.naturalScrolling = true;
+    touchpad = {
+      naturalScrolling = true;
+      tapping.enable = true;
+      tappingButtonMap = "lrm";
+    };
+    
+  };
+  
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -75,9 +86,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
   
   nix.package = pkgs.nixVersions.stable;
   nix.extraOptions = ''
@@ -117,7 +125,7 @@
   # };
 
   # List services that you want to enable:
-  
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
