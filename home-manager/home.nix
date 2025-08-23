@@ -78,6 +78,11 @@
     enable = true;
     userName = "sudhanv09";
     userEmail = "mystogun125@gmail.com";
+    extraConfig = {
+	init.defaultBranch = "main";
+	core.editor = "vi";
+	pull.rebase = "false";
+    };
   };
   
   programs.gh = {

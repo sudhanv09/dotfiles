@@ -23,7 +23,7 @@
   networking.networkmanager.ensureProfiles.profiles = {
 	home-wifi = {
 		connection = {
-			id="Flat earth Society";
+			id="Flat earth society";
 			permissions = "";
 			type = "wifi";
 		};
