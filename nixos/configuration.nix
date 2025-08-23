@@ -62,10 +62,9 @@
     mouse.naturalScrolling = true;
     touchpad = {
       naturalScrolling = true;
-      tapping.enable = true;
+      tapping = true;
       tappingButtonMap = "lrm";
     };
-    
   };
   
   # Enable CUPS to print documents.
