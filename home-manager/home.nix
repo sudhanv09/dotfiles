@@ -97,6 +97,13 @@
     userName = "sudhanv09";
     userEmail = "mystogun125@gmail.com";
   };
+  
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper = {
+      enable = true;
+    };
+  };
 
   i18n.inputMethod = {
     enable = true;
