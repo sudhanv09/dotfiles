@@ -47,9 +47,10 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/awesome/rc.lua".source = ../.config/awesome/rc.lua;
-    ".config/kitty".source = ../.config/kitty;
-    ".config/rofi".source = ../.config/rofi;
+    ".config/awesome/rc.lua".source = config.lib.file.mkOutOfStoreSymlink ../.config/awesome/rc.lua;
+    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink ../.config/kitty;
+    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink ../.config/rofi;
+    ".config/emacs".source = config.lib.file.mkOutOfStoreSymlink ../.config/emacs;
   };
 
   home.sessionVariables = {
