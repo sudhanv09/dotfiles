@@ -31,12 +31,18 @@
 
 (setq package-enable-at-startup nil) ;; Disables the default package manager.
 (setq straight-check-for-modifications nil)
+
+
+(setq straight-base-dir
+      (expand-file-name "emacs/"
+                        (or (getenv "XDG_DATA_HOME")
+                            (expand-file-name "~/.local/share/"))))
+
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name
         "straight/repos/straight.el/bootstrap.el"
-        (or (bound-and-true-p straight-base-dir)
-            user-emacs-directory)))
+        straight-base-dir))
       (bootstrap-version 7))
   (unless (file-exists-p bootstrap-file)
     (with-current-buffer

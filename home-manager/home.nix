@@ -10,8 +10,9 @@
     emacs
     zed-editor
     calibre
+    neovim
     
-    # CLI
+    # CLI UTILS
     git
     jujutsu
     awesome
@@ -30,7 +31,9 @@
     zip
     btop
     zoxide
-    
+    xclip
+
+   # LANGUAGE / RUNTIMES 
     bun
     python313
     go
@@ -50,7 +53,9 @@
     ".config/awesome/rc.lua".source = config.lib.file.mkOutOfStoreSymlink ../.config/awesome/rc.lua;
     ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink ../.config/kitty;
     ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink ../.config/rofi;
-    ".config/emacs".source = config.lib.file.mkOutOfStoreSymlink ../.config/emacs;
+
+    ".config/emacs/init.el".source = config.lib.file.mkOutOfStoreSymlink ../.config/emacs/init.el;
+    ".config/emacs/lisp".source = config.lib.file.mkOutOfStoreSymlink ../.config/emacs/lisp;
   };
 
   home.sessionVariables = {
