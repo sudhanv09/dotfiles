@@ -20,16 +20,10 @@
   # Enable networking
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
-  networking.networkmanager.ensureProfiles.profiles = {
-	home-wifi = {
-		connection = {
-			id="Flat earth society";
-			permissions = "";
-			type = "wifi";
-		};
-	};
+  networking.networkmanager.settings = {
+    main.plugins = "keyfile";
   };
-
+  
   # Set your time zone.
   time.timeZone = "Asia/Taipei";
 

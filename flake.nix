@@ -42,7 +42,10 @@
         "zeus@home-nix" = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.x86_64-linux;
             extraSpecialArgs = {inherit inputs sfmonoFont;};
-            modules = [
+            modules = [ 
+            {
+              nixpkgs.config.allowUnfree = true;
+            }
                 ./home-manager/home.nix
             ];
         };  

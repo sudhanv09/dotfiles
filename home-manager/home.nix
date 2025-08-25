@@ -8,7 +8,7 @@
   home.packages = with pkgs; [
     # APPS
     emacs
-    zed-editor
+    vscode
     calibre
     neovim
     
